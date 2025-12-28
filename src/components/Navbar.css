@@ -1,0 +1,58 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 26px 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  /* KEY FIX */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0)
+  );
+  backdrop-filter: blur(12px);
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 18px 8vw;
+}
+
+.nav-left {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.nav-right a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.75;
+  position: relative;
+}
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.nav-right a:hover {
+  opacity: 1;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}

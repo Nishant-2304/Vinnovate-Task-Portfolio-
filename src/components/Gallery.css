@@ -1,0 +1,116 @@
+.gallery-section {
+  position: relative;
+  padding: 160px 0;
+  background: #030507;
+  color: white;
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.gallery-header {
+  padding: 0 8vw;
+  max-width: 600px;
+  margin-bottom: 120px;
+}
+
+.gallery-header h2 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin-bottom: 14px;
+}
+
+.gallery-header p {
+  font-size: 1.05rem;
+  opacity: 0.65;
+}
+
+/* ROWS */
+
+.gallery-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ROW */
+
+.gallery-row {
+  display: flex;
+  gap: 48px;
+  padding-left: 8vw;
+  will-change: transform, opacity;
+  transition: opacity 0.2s linear;
+}
+
+/* ITEM */
+
+.gallery-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 340px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* IMAGE */
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* OVERLAY */
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-overlay span {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* HOVER */
+
+.gallery-item:hover img {
+  transform: scale(1.12);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* EDGE FADE */
+
+.gallery-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.gallery-fade.left {
+  left: 0;
+  background: linear-gradient(to right, #030507, transparent);
+}
+
+.gallery-fade.right {
+  right: 0;
+  background: linear-gradient(to left, #030507, transparent);
+}

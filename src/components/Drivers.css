@@ -1,0 +1,74 @@
+.drivers-section {
+  position: relative;
+  padding: 160px 8vw;
+  background: #05070a;
+  color: white;
+  height: calc(100vh * 4); /* 3 cards + buffer */
+}
+
+/* HEADER */
+
+.drivers-header {
+  max-width: 600px;
+  margin-bottom: 120px;
+}
+
+.drivers-header h2 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin-bottom: 12px;
+}
+
+.drivers-header p {
+  font-size: 1.05rem;
+  opacity: 0.65;
+}
+
+/* STACK */
+
+.drivers-stack {
+  position: sticky;
+  top: 120px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+/* CARD */
+
+.driver-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(0);
+  width: 420px;
+  height: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  transition: transform 0.08s linear;
+}
+
+/* IMAGE */
+
+.driver-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFO */
+
+.driver-info {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+.driver-info h3 {
+  font-size: 1.4rem;
+}
+
+.driver-info span {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
